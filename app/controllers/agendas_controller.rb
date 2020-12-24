@@ -24,8 +24,9 @@ class AgendasController < ApplicationController
 
   def destroy
     return flash[:notice] = I18n.t('views.messages.you_do_not_have_permission') unless current_user == @agenda.user || current_user == @agenda.team.owner
+    AgendaMailer.destroy_mail(@agenda).deliver
     @agenda.destroy
-    redirect_to teams_url, notice: I18n.t('views.messages.destroy_agenda')
+    redirect_to dashboard_path, notice: I18n.t('views.messages.destroy_agenda')
   end
 
   private
