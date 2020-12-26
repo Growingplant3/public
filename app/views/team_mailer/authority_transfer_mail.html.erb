@@ -1,2 +1,2 @@
-<h1><%= "#{@old_owner.email}さんより、新リーダーに抜擢されました！" %></h1>
+<h1><%= "#{@old_owner.email}" + I18n.t('views.messages.congratulation_new_leader') %></h1>
 <h4>team: <%= @team.name %></h4>
