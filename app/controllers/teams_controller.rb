@@ -49,9 +49,11 @@ class TeamsController < ApplicationController
 
   def authority_transfer
     team = Team.find(params[:id])
-    team.owner_id = params[:user_id].to_i
+    old_owner = User.find(team.owner_id)
+    team.owner_id = User.find(params[:user_id]).id
     team.save
-    redirect_to team_path(params[:id])
+    TeamMailer.authority_transfer_mail(old_owner, team).deliver
+    redirect_to team_path(team)
   end
 
   private
