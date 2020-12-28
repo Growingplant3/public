@@ -257,6 +257,8 @@ ja:
       edit_profile: 'プロフィールを編集'
       team_you_belong_to: '所属しているチーム'
       posted_articles: '投稿した記事一覧'
+      notice_new_leader: '新リーダー就任のお知らせ'
+      congratulation_new_leader: 'さんより、新リーダーに抜擢されました！'
     button:
       submit: '投稿'
       edit: '編集'
