@@ -205,6 +205,7 @@ ja:
     pm: 午後
   views:
     messages:
+      only_owner: 'リーダーのみ編集可能です。'
       agenda_content: 'アジェンダの内容'
       agenda_destroy_notice: 'アジェンダ削除のお知らせ'
       you_do_not_have_permission: '権限がありません。'
